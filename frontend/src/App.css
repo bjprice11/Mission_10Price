@@ -40,3 +40,61 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Container for the table to handle spacing */
+.table-container {
+  margin: 20px auto;
+  max-width: 95%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse; /* Essential for clean borders */
+  background-color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden; /* Ensures rounded corners show */
+}
+
+/* Header styling */
+.table-header {
+  background-color: #122fd5; /* Using your blue as the primary color */
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+}
+
+.table-header th {
+  padding: 15px 12px;
+  text-align: left;
+  font-weight: 700;
+}
+
+/* Row and Cell styling */
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Zebra Striping for better readability */
+.table tbody tr:nth-of-type(even) {
+  background-color: #f8f9fa;
+}
+
+/* Hover effect to help the user track rows */
+.table tbody tr:hover {
+  background-color: #edf0ff;
+  transition: background-color 0.2s ease;
+}
+
+/* Specific styling for the Team column to make it pop */
+.team-cell {
+  font-weight: 600;
+  color: #122fd5;
+}

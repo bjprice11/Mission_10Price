@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mission_10Price.Models;
 
+// Class for the bowler object, tells the database what the bowler object is
 public class Bowlers
 {
     [Key]
@@ -13,7 +14,7 @@ public class Bowlers
     public string BowlerLastName { get; set; }
     [Required]
     public string BowlerFirstName { get; set; }
-    public char BowlerMiddleInit { get; set; }
+    public char? BowlerMiddleInit { get; set; }
     [Required]
     public string BowlerAddress { get; set; }
     [Required]
@@ -21,7 +22,7 @@ public class Bowlers
     [Required]
     public string BowlerState { get; set; }
     [Required]
-    public string BowlerZipCode { get; set; }
+    public string BowlerZip { get; set; }
     [Required]
     public string BowlerPhoneNumber { get; set; }
     [Required]
