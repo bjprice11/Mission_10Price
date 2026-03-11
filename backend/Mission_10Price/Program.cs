@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<BowlingDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("Bowlingonnection")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("BowlingConnection")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

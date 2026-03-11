@@ -5,7 +5,7 @@ using Mission_10Price.Models;
 
 namespace Mission_10Price.Controllers;
 
-[Microsoft.AspNetCore.Components.Route("api/[controller]")]
+[Route("api/[controller]")]
 [ApiController]
 public class Bowling:ControllerBase
 {
@@ -17,11 +17,12 @@ public class Bowling:ControllerBase
     }
 
     [HttpGet(Name = "GetBowling")]
-    public IEnumerable<Data.Bowler> Get()
+    public IEnumerable<Data.Bowlers> Get()
     {
         var bowlerList = _bowlingContext.Bowlers
-            .Include(b => b.Team)
-            .Where(b => b.Team.TeamName == "Marlins"|| b.Team.TeamName == "Sharks")
-            .ToList();
+            .Include(b => b.Teams)
+            .Where(b => b.Teams.TeamName == "Marlins"|| b.Teams.TeamName == "Sharks")
+            .ToArray();
+        return bowlerList;
     }
 }
